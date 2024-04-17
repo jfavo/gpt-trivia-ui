@@ -3,5 +3,8 @@ export enum Screens {
     Home,
     GuestSignin,
     Signup,
-    UserProfile
+    UserProfile,
+    MatchLanding,
+    MatchHistories,
+    CustomCategories,
 }
