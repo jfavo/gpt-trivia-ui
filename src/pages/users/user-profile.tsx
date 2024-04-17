@@ -15,8 +15,10 @@ export const UserProfilePage = ({navigation}) => {
 
     const handleSignout = async () => {
         setSigningOut(true);
-        await signUserOut(dispatch, setCurrentUser);
-        navigation.navigate(Screens.Landing.toString());
+        signUserOut(dispatch, setCurrentUser)
+            .then(
+                () => navigation.navigate(Screens.Landing.toString())
+            );
     }
 
     return (

@@ -11,6 +11,9 @@ import { Screens } from "./src/models/screens";
 import { store } from "./src/state/app.store";
 import { UserProfilePage } from "./src/pages/users/user-profile";
 import { SignupPage } from "./src/pages/users/signup-page";
+import { MatchLanding } from "./src/pages/match/match-landing";
+import { MatchHistory } from "./src/pages/match/match-history";
+import { CustomCategories } from "./src/pages/match/custom-categories";
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +36,7 @@ export default function App() {
               <Stack.Screen 
                 name={Screens.Home.toString()}
                 component={HomePage}
+                options={{headerBackVisible: false}}
               />
               <Stack.Screen 
                 name={Screens.Signup.toString()}
@@ -41,6 +45,18 @@ export default function App() {
               <Stack.Screen 
                 name={Screens.UserProfile.toString()}
                 component={UserProfilePage}
+              />
+              <Stack.Screen 
+                name={Screens.MatchLanding.toString()}
+                component={MatchLanding}
+              />
+              <Stack.Screen 
+                name={Screens.MatchHistories.toString()}
+                component={MatchHistory}
+              />
+              <Stack.Screen 
+                name={Screens.CustomCategories.toString()}
+                component={CustomCategories}
               />
             </Stack.Navigator>
           </NavigationContainer>
